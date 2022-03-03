@@ -24,19 +24,19 @@ function slider({sliderSelector, trackSelector, itemSelector, arrowNextSelector,
     arrowNext.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        scrollCheck();
+        workNext();
     });
     arrowPrev.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        scrollCheckPrev();
+        workPrev();
     });
 
     checkArrowPrev();
     changeContent('#current', count);
     changeContent('#total', colItem);
 
-    function scrollCheckPrev() {
+    function workPrev() {
         if(Math.abs(positionTrack) / widthItme == 1) {
             slidTrack.style.left = `${positionTrack += widthItme}px`;
             checkArrowPrev();
@@ -49,7 +49,7 @@ function slider({sliderSelector, trackSelector, itemSelector, arrowNextSelector,
             changeContent('#current', --count);
         }
     }
-    function scrollCheck() {
+    function workNext() {
         if(((generalWidthItem - (widthItme * countItems)) - Math.abs(positionTrack)) / widthItme == 1) {
             slidTrack.style.left = `${positionTrack -= widthItme}px`;
             checkArrowPrev();

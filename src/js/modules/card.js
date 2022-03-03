@@ -30,12 +30,12 @@ function menuCard() {
         }
     }
 
-    getData('db.json')
+    getData('http://localhost:3000/menu')
     .then(data => {
         return data.json();
     })
     .then(data => {
-        data.menu.forEach(({img, alt, subtitle, descr, coins}) => {
+        data.forEach(({img, alt, subtitle, descr, coins}) => {
             new MenuCard(img, alt, subtitle, descr, coins).render();
         });
     });
