@@ -1,3 +1,6 @@
+require('es6-promise').polyfill();
+require('nodelist-foreach-polyfill');
+
 import tabs from './modules/tabs';
 import menuCard from './modules/card';
 import calc from './modules/calc';

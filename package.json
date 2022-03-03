@@ -12,11 +12,18 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": [
+    "> 0.2%"
+  ],
   "bugs": {
     "url": "https://github.com/KonstansinChertovich/project/issues"
   },
   "homepage": "https://github.com/KonstansinChertovich/project#readme",
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
     "browser-sync": "^2.27.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
@@ -28,9 +35,13 @@
     "sass": "^1.43.5"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "core-js": "^3.21.1",
     "dave": "^0.2.1",
+    "es6-promise": "^4.2.8",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
+    "nodelist-foreach-polyfill": "^1.2.0",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
   }
